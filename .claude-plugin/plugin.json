@@ -1,0 +1,12 @@
+{
+  "name": "llm-distiller",
+  "version": "1.0.0",
+  "description": "Cognitive-to-deterministic compiler turning repetitive LLM prompts into sub-millisecond code.",
+  "author": {
+    "name": "Kian",
+    "url": "https://github.com/kicode01"
+  },
+  "skills": [
+    "./"
+  ]
+}

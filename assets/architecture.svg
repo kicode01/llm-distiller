@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: #f8fafc; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; }
+    .tag { font-size: 10px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+    .metric { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 26px; font-weight: 700; }
+  </style>
+
+  <rect width="860" height="420" rx="14" fill="url(#bg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Controls -->
+  <circle cx="36" cy="36" r="6" fill="#ef4444" opacity="0.8"/>
+  <circle cx="54" cy="36" r="6" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="72" cy="36" r="6" fill="#10b981" opacity="0.8"/>
+  <text x="100" y="41" class="mono" fill="#64748b">llm-distiller // Cognitive-to-Deterministic Compiler</text>
+
+  <!-- Comparison Split -->
+  <!-- Left: Cloud LLM Call (Before) -->
+  <g transform="translate(40, 80)">
+    <rect width="360" height="230" rx="10" fill="#1c1318" stroke="#7f1d1d"/>
+    <rect x="14" y="14" width="130" height="20" rx="4" fill="#ef4444" opacity="0.2"/>
+    <text x="22" y="28" class="tag" fill="#f87171">BEFORE: CLOUD LLM</text>
+
+    <text x="14" y="65" class="mono" fill="#94a3b8">Request: Support ticket classification</text>
+    <text x="14" y="85" class="mono" fill="#94a3b8">Model: GPT-4o / Claude / Gemini API</text>
+
+    <!-- Metrics -->
+    <text x="14" y="130" class="metric" fill="#f87171">1,500 ms</text>
+    <text x="14" y="148" class="mono" fill="#ef4444">High user latency</text>
+
+    <text x="14" y="190" class="metric" fill="#f87171">$7,200 / yr</text>
+    <text x="14" y="208" class="mono" fill="#ef4444">Token API bills on repetitive prompts</text>
+  </g>
+
+  <!-- Distillation Arrow -->
+  <g transform="translate(400, 170)">
+    <circle cx="30" cy="30" r="24" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="18" y="34" class="title" fill="#60a5fa">-&gt;</text>
+    <text x="-10" y="70" class="tag" fill="#94a3b8">DISTILL</text>
+  </g>
+
+  <!-- Right: Distilled AST Function (After) -->
+  <g transform="translate(460, 80)">
+    <rect width="360" height="230" rx="10" fill="#0d1f1a" stroke="#047857"/>
+    <rect x="14" y="14" width="150" height="20" rx="4" fill="#10b981" opacity="0.2"/>
+    <text x="22" y="28" class="tag" fill="#34d399">AFTER: COMPILED AST</text>
+
+    <text x="14" y="65" class="mono" fill="#6ee7b7">Synthesized: Regex &amp; Decision Tree</text>
+    <text x="14" y="85" class="mono" fill="#6ee7b7">Parity Accuracy: 99.8% Ground Truth</text>
+
+    <!-- Metrics -->
+    <text x="14" y="130" class="metric" fill="#34d399">0.08 ms</text>
+    <text x="14" y="148" class="mono" fill="#10b981">15,000x faster execution</text>
+
+    <text x="14" y="190" class="metric" fill="#34d399">$0.00 / yr</text>
+    <text x="14" y="208" class="mono" fill="#10b981">Zero cloud API tokens forever</text>
+  </g>
+
+  <!-- Bottom banner -->
+  <rect x="40" y="335" width="780" height="50" rx="8" fill="#0c1322" stroke="#1e293b"/>
+  <text x="56" y="365" class="mono" fill="#cbd5e1">Synthesis Rule: re.search(r'\b(refund|chargeback|cancel)\b', t) -&gt; 'BILLING'</text>
+</svg>
